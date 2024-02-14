@@ -1,79 +1,82 @@
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 
 public class CardManager : MonoBehaviour
 {
     public GameObject Card;
-    public GameObject CardSlotPrefab;
-    public List<Vector3> CardSlotPositions = new List<Vector3>();
-
-    public List<Vector3> Player1CardPositions = new List<Vector3>();
-    public List<Vector3> Player2CardPositions = new List<Vector3>();
+    public string CardFolder = "Assets/Resources/Cards";
+    public List<Vector2> CardSlotPositions = new List<Vector2>();
+    public List<Vector2> Slot_j1 = new List<Vector2>();
+    public List<Vector2> Slot_j2 = new List<Vector2>();
 
     void Start()
     {
-        CardSlotPositions.Add(new Vector3(13, 1, -19));
-        CardSlotPositions.Add(new Vector3(13, 1, 0));
-        CardSlotPositions.Add(new Vector3(13, 1, 19));
-        CardSlotPositions.Add(new Vector3(0, 1, -19));
-        CardSlotPositions.Add(new Vector3(0, 1, 0));
-        CardSlotPositions.Add(new Vector3(0, 1, 19));
-        CardSlotPositions.Add(new Vector3(-13, 1, -19));
-        CardSlotPositions.Add(new Vector3(-13, 1, 0));
-        CardSlotPositions.Add(new Vector3(-13, 1, 19));
-        CardSlotPositions.Add(new Vector3(35, 1, 19));
-        CardSlotPositions.Add(new Vector3(35, 1, 9));
-        CardSlotPositions.Add(new Vector3(35, 1, 0));
-        CardSlotPositions.Add(new Vector3(35, 1, -9));
-        CardSlotPositions.Add(new Vector3(35, 1, -19));
-        CardSlotPositions.Add(new Vector3(-35, 1, 19));
-        CardSlotPositions.Add(new Vector3(-35, 1, 9));
-        CardSlotPositions.Add(new Vector3(-35, 1, 0));
-        CardSlotPositions.Add(new Vector3(-35, 1, -9));
-        CardSlotPositions.Add(new Vector3(-35, 1, -19));
-
+        CardSlotPositions.Add(new Vector2(0, 0));
+        CardSlotPositions.Add(new Vector2(2, 0));
+        CardSlotPositions.Add(new Vector2(-2, 0));
+        CardSlotPositions.Add(new Vector2(0, 2));
+        CardSlotPositions.Add(new Vector2(0, -2));
+        CardSlotPositions.Add(new Vector2(2, 2));
+        CardSlotPositions.Add(new Vector2(2, -2));
+        CardSlotPositions.Add(new Vector2(-2, 2));
+        CardSlotPositions.Add(new Vector2(-2, -2));
+        CardSlotPositions.Add(new Vector2(7, 3));
+        CardSlotPositions.Add(new Vector2(5, 2));
+        CardSlotPositions.Add(new Vector2(5, 0));
+        CardSlotPositions.Add(new Vector2(5, -2));
+        CardSlotPositions.Add(new Vector2(7, -3));
+        CardSlotPositions.Add(new Vector2(-7, 3));
+        CardSlotPositions.Add(new Vector2(-5, 2));
+        CardSlotPositions.Add(new Vector2(-5, 0));
+        CardSlotPositions.Add(new Vector2(-5, -2));
+        CardSlotPositions.Add(new Vector2(-7, -3));
         DivideCardPositions();
 
-        foreach (Vector3 position in CardSlotPositions)
-        {
-            CreateCardSlot(position);
-        }
-
-        InstantiatePlayerCards(Player1CardPositions, "Joueur1");
-        InstantiatePlayerCards(Player2CardPositions, "Joueur2");
+        Init_game(Slot_j1);
+        Init_game(Slot_j2);
     }
 
     void DivideCardPositions()
     {
-        // Divisez les positions pour chaque joueur (à ajuster selon votre besoin).
-        Player1CardPositions.AddRange(CardSlotPositions.GetRange(9, 5));
-        Player2CardPositions.AddRange(CardSlotPositions.GetRange(14, 5));
+        Slot_j1.AddRange(CardSlotPositions.GetRange(9, 5));
+        Slot_j2.AddRange(CardSlotPositions.GetRange(14, 5));
     }
 
-    void CreateCardSlot(Vector3 position)
+    void Init_game(List<Vector2> slot)
     {
-        // Crée un nouvel emplacement de carte à la position spécifiée.
-        Instantiate(CardSlotPrefab, position, Quaternion.identity);
-    }
-
-    void InstantiatePlayerCards(List<Vector3> playerCardPositions, string playerName)
-    {
-        foreach (Vector3 position in playerCardPositions)
+        for (int i = 1; i < 6; i++)
         {
-            InstantiateCard(position, null);
+            GameObject card = Instantiate(Card, slot[i], Quaternion.identity);
+            card.name = "Card" + i;
         }
     }
 
-    void InstantiateCard(Vector3 position, CardSlot initialSlot)
+    public Vector2 GetClosestFreeSlot(Vector2 position)
     {
-        // Instancie une nouvelle carte à la position spécifiée.
-        GameObject newCard = Instantiate(Card, position, Quaternion.identity);
+        Vector2 closestSlot = Vector2.zero;
+        float closestDistance = float.MaxValue;
 
-        // Ajoute le script de la carte (assure-toi que le script est attaché au prefab).
-        CardData card = newCard.GetComponent<CardData>();
+        foreach (Vector2 slot in CardSlotPositions)
+        {
+            if (!Slot_j1.Contains(slot) && !Slot_j2.Contains(slot))
+            {
+                float distance = Vector2.Distance(position, slot);
+                if (distance < closestDistance)
+                {
+                    closestDistance = distance;
+                    closestSlot = slot;
+                }
+            }
+        }
 
-        // Configure des propriétés spécifiques de la carte si nécessaire.
-        card.SetCardData(1, "1-The_Magician", 2, 3, 4, 5, "1-The_Magician", initialSlot);
-        card.AssignSlot(initialSlot);
+        if (closestDistance < 1.0f)
+        {
+            return closestSlot;
+        }
+        else
+        {
+            return Vector2.zero;
+        }
     }
 }
