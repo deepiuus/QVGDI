@@ -1,41 +1,33 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-    public int CurrentPlayer = 1;
-    public CardData[,] Board = new CardData[3, 3];
+    public int currentPlayer = 0;
+    public int NumberOfPlayers = 2;
+    public Text PlayerTurnText;
 
-    public void PlaceCard(CardData card, int x, int y)
+    void Start()
     {
-        Board[x, y] = card; // Place the card on the board
-        card.Owner = CurrentPlayer; // Set the owner of the card
-        CheckCapture(card, x, y); // Check for captures after placing the card
-        CurrentPlayer = 3 - CurrentPlayer; // Switch to the other player
+        NextPlayer();
+    }
+    // Call this method to change the current player to the next one
+    public void NextPlayer()
+    {
+        currentPlayer = currentPlayer % NumberOfPlayers + 1;
+        PlayerTurnText.text = "Player " + currentPlayer + " turn";
     }
 
-    public void CheckCapture(CardData card, int x, int y)
+    // Call this method to check if it's the turn of a specific player
+    public bool IsPlayerTurn(int player)
     {
-        // Check the card above
-        if (y < 2 && Board[x, y + 1]?.Owner != card.Owner && card.Top > Board[x, y + 1].Bottom)
-        {
-            Board[x, y + 1].Owner = card.Owner;
-        }
-        // Check the card below
-        if (y > 0 && Board[x, y - 1]?.Owner != card.Owner && card.Bottom > Board[x, y - 1].Top)
-        {
-            Board[x, y - 1].Owner = card.Owner;
-        }
-        // Check the card to the right
-        if (x < 2 && Board[x + 1, y]?.Owner != card.Owner && card.Right > Board[x + 1, y].Left)
-        {
-            Board[x + 1, y].Owner = card.Owner;
-        }
-        // Check the card to the left
-        if (x > 0 && Board[x - 1, y]?.Owner != card.Owner && card.Left > Board[x - 1, y].Right)
-        {
-            Board[x - 1, y].Owner = card.Owner;
-        }
+        return currentPlayer == player;
+    }
+
+    public void EndTurn()
+    {
+        currentPlayer = 3 - currentPlayer;
     }
 }
