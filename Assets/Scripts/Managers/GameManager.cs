@@ -9,20 +9,41 @@ public class GameManager : Singleton<GameManager>
     private string _currentCategory;
     private List<int> _askedQuestionsId = new List<int>();
 
+    private void OnEnable()
+    {
+        PanelEvents.OnWheelScreenRequested += ShowWheelScreen;
+    }
+
+    private void OnDisable()
+    {
+        PanelEvents.OnWheelScreenRequested -= ShowWheelScreen;
+    }
+
+
+    private void ShowWheelScreen()
+    {
+        PanelManager.Instance.ShowPanel("WheelScreen");
+    }
+
     public QuestionModel getQuestionCategory(string categoryName)
     {
         CategoryModel categoryModel = config.categories
         .FirstOrDefault(category => category.categoryName == categoryName);
         if (categoryModel != null)
         {
-            int randomIndex = Random.Range(0, categoryModel.questions.Count);
-            while (categoryModel.questions.Count > _askedQuestionsId.Count
-            && _askedQuestionsId.Contains(randomIndex))
+            int nextIndex = _askedQuestionsId.Count;
+            if (nextIndex < categoryModel.questions.Count)
             {
-                randomIndex = Random.Range(0, categoryModel.questions.Count);
+                _askedQuestionsId.Add(nextIndex);
+                return categoryModel.questions[nextIndex];
             }
-            _askedQuestionsId.Add(randomIndex);
-            return categoryModel.questions[randomIndex];
+            else
+            {
+                PanelManager.Instance.ShowPanel("WheelScreen", PanelShowBehaviour.HIDE_PREVIOUS);
+                FindObjectOfType<Audiomanager>().Stop("Question theme");
+                FindObjectOfType<Audiomanager>().Play("Wheel theme");
+                return null;
+            }
         }
         return null;
     }

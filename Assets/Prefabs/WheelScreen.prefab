@@ -686,5 +686,5 @@ MonoBehaviour:
   Wheel: {fileID: 4208218850803049184}
   PlayText: {fileID: 8580640465675888154}
   SpinText: {fileID: 7055065940936205723}
-  RotateDuration: 3
-  AmountRotations: 4
+  RotateDuration: 9
+  AmountRotations: 5

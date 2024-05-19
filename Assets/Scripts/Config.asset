@@ -116,12 +116,6 @@ MonoBehaviour:
       answerC: 'Duo se suicide et fait un pacte avec Satan '
       answerD: "\xE7a d\xE9pends de son humeur"
       correctAnswer: 4
-    - question: CultureG
-      answerA: non
-      answerB: non
-      answerC: non
-      answerD: oui
-      correctAnswer: 4
     - question: "Parmi ces actions, qu\u2019a fait Chuck Norris ? "
       answerA: "Il a \xE9puis\xE9 son forfait illimit\xE9"
       answerB: Il a fini l'eau du robinet, deux fois
@@ -294,8 +288,8 @@ MonoBehaviour:
       correctAnswer: 4
   - categoryName: "Anim\xE9s"
     questions:
-    - question: "Anim\xE9s"
-      answerA: oui
+    - question: "Quel recette senku de Dr Stone ne nous apprend pas \xE0 faire ?"
+      answerA: Coca Cola
       answerB: non
       answerC: non
       answerD: non

@@ -18,5 +18,6 @@ public class MenuManager : MonoBehaviour
     private void ShowMainScreen()
     {
         PanelManager.Instance.ShowPanel("MainScreen");
+        FindObjectOfType<Audiomanager>().Play("Main theme");
     }
 }

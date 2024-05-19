@@ -633,6 +633,33 @@ MonoBehaviour:
     loop: 0
     mixerGroup: {fileID: 0}
     source: {fileID: 0}
+  - name: Spinning
+    clip: {fileID: 8300000, guid: 7b457cc4cef1c1a40a479fc3eb70e025, type: 3}
+    volume: 5
+    volumeVariance: 0
+    pitch: 1
+    pitchvariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: Main theme
+    clip: {fileID: 8300000, guid: c4a931d560da7a7438736229645b15a3, type: 3}
+    volume: 5
+    volumeVariance: 0
+    pitch: 1
+    pitchvariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: Wheel theme
+    clip: {fileID: 8300000, guid: c9c7cb4e5fee72949ab75ef2b383d117, type: 3}
+    volume: 5
+    volumeVariance: 0
+    pitch: 1
+    pitchvariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
 --- !u!4 &1674032558
 Transform:
   m_ObjectHideFlags: 0

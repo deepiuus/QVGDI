@@ -10,6 +10,8 @@ public class QuestionManager : Singleton<QuestionManager>
     public static Action OnAnswerProvided;
     public Transform CorrectImage;
     public Transform WrongImage;
+    public Transform JPImage;
+    public List<Transform> SacrificeImages = new List<Transform>();
     public QuestionUI question;
     private GameManager _gameManager;
     private string _currentCategory;
@@ -19,6 +21,8 @@ public class QuestionManager : Singleton<QuestionManager>
     {
         _gameManager = GameManager.Instance;
         _currentCategory = _gameManager.GetCurrentCategory();
+        FindObjectOfType<Audiomanager>().Stop("Main theme");
+        FindObjectOfType<Audiomanager>().Stop("Wheel theme");
         FindObjectOfType<Audiomanager>().Play("Question theme");
         LoadNextQuestion();
     }
@@ -41,12 +45,19 @@ public class QuestionManager : Singleton<QuestionManager>
         if (isCorrect)
         {
             TweenResult(CorrectImage);
+            JPImage.DORotate(new Vector3(0, 0, 360), 1f, RotateMode.FastBeyond360);
+            SacrificeImages.ForEach(image => image.DOScale(1f, 0.5f).SetEase(Ease.OutBack));
             FindObjectOfType<Audiomanager>().Play("Right Answer");
         }
         else
         {
             TweenResult(WrongImage);
             FindObjectOfType<Audiomanager>().Play("Wrong answer");
+            Sequence result = DOTween.Sequence();
+            result.Append(JPImage.DORotate(new Vector3(0, 0, 30), 0.5f, RotateMode.Fast));
+            result.Append(JPImage.DORotate(new Vector3(0, 0, -30), 0.5f, RotateMode.Fast));
+            result.Append(JPImage.DORotate(new Vector3(0, 0, 0), 0.5f, RotateMode.Fast));
+            SacrificeImages.ForEach(image => image.DOScale(0f, 0.2f).SetEase(Ease.Linear));
         }
         return isCorrect;
     }

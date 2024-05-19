@@ -28,6 +28,7 @@ public class WheelUI : MonoBehaviour
         {
             return;
         }
+        FindObjectOfType<Audiomanager>().Play("Spinning");
         float randomAngle = Random.Range(0, 360);
         GameManager.Instance.SetCurrentCategory(GetLandedCategory(randomAngle));
         Debug.Log(GetLandedCategory(randomAngle));
