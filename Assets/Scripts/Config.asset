@@ -15,282 +15,73 @@ MonoBehaviour:
   categories:
   - categoryName: Science
     questions:
-    - question: "Un train pesant 1500 tonnes avance \xE0 300km/h, en sachant que
-        John se trouve \xE0 30 m\xE8tres du train sur les rails, avec quel force
-        le train percutera-t-il John sachant que la dur\xE9e de l\u2019impact sera
-        d\u2019environ 0.5 secondes ? "
-      answerA: Environ 1000 Newtons
-      answerB: Environ 250000000 Newtons
-      answerC: "Question pi\xE8ge : John n\u2019a pas charg\xE9 correctement, sa
-        hitbox n\u2019est pas pr\xE9sente, le train le traverse "
-      answerD: Environ 14 Litres
-      correctAnswer: 2
-    - question: "Combien de lancers de chat seraient n\xE9cessaires pour atteindre
-        la m\xEAme force d\u2019impact en estimant le poids du chat \xE0 4kg et la
-        vitesse du lancer \xE0 1km/h ? "
-      answerA: Environ 150000
-      answerB: 10000 suffirons
-      answerC: 112843661
-      answerD: Le chat sera mort avant
-      correctAnswer: 3
-    - question: "Quel est la particularit\xE9 de la mol\xE9cule C2N14 aussi connue
-        sous le nom loufoque de azidoazide azide ?  "
-      answerA: Elle sent le pop-corn
-      answerB: "Elle sert \xE0 stabiliser la nitroglyc\xE9rine"
-      answerC: "Elle permet de synth\xE9tiser de la m\xE9thamph\xE9tamine"
-      answerD: "Elle explose al\xE9atoirement"
-      correctAnswer: 4
-    - question: "Si vous entrez dans un trou noir, qu\u2019est-ce qui vous tuera
-        en premier ? "
-      answerA: La chaleur
-      answerB: La radiation
-      answerC: La spaghettification
-      answerD: C'est un peu la roue de la chance
-      correctAnswer: 3
-    - question: 'Laquelle de ces substances est la moins dangereuse ? '
-      answerA: L'uranium
-      answerB: Le LSD
-      answerC: "La nitroglyc\xE9rine"
-      answerD: L'eau
-      correctAnswer: 4
-    - question: "Lorsqu\u2019il est midi \xE0 Si\xE8ne, l\u2019ombre du phare d\u2019Alexandrie
-        forme un angle de 30 degr\xE9s avec celui-ci, sachant qu\u2019une caravane
-        parcours environ 250 stades par jour, quelle est la circonf\xE9rence de la
-        terre ? "
-      answerA: Trop
-      answerB: 40000,25km
-      answerC: Alain Chabat
-      answerD: Je suis pas venu ici pour faire des math
-      correctAnswer: 2
-    - question: "L'ammoniac pourrait remplacer les fonctions de l\u2019eau "
-      answerA: Vrai
-      answerB: Faux
-      answerC: "Vrai mais on serait s\xFBrement tous mort"
-      answerD: C'est quoi ces questions de merde
-      correctAnswer: 3
-    - question: "Quelle est la masse volumique de l\u2019eau ? "
-      answerA: 8,6E-1kg/m^3
-      answerB: 1,9g/cm^-3
-      answerC: '1,93E4kg/m^3 '
-      answerD: 1
-      correctAnswer: 4
-    - question: "Parmi ces propositions, qu\u2019est-ce qui est le plus lourd ? "
-      answerA: "Une \xE9toile \xE0 neutrons"
-      answerB: Un pulsar
-      answerC: Un trou noir
-      answerD: "Une femme qui dit \u201Cau moins 1m80\u201D sur tinder, un probl\xE8me
-        auquel je ne suis pas sujet"
-      correctAnswer: 4
-    - question: 'Il existe une maladie qui transforme tous vos tissus en os '
-      answerA: Vrai
-      answerB: Faux
-      answerC: "Wtf c'est d\xE9geulasse"
-      answerD: "Le cygne Napol\xE9on"
+    - question: Science
+      answerA: oui
+      answerB: non
+      answerC: non
+      answerD: non
       correctAnswer: 1
+    - question: Science
+      answerA: non
+      answerB: oui
+      answerC: non
+      answerD: non
+      correctAnswer: 2
   - categoryName: CultureG
     questions:
-    - question: 'Que signifie verkehrsinfrastrukturfinancierungsgesellschaftgesetz
-        ? '
-      answerA: 'Loi sur le financement des infrastructures de travail '
-      answerB: "Loi sur les soci\xE9t\xE9s de financement d\u2019infrastructures
-        de transport "
-      answerC: Front National
-      answerD: "\xE7a serait vachement dr\xF4le que \xE7a ne veuille rien dire "
-      correctAnswer: 2
-    - question: "Quel c\xE9l\xE8bre politicien a dit un jour \u201Cles mots b\xE2tissent
-        des ponts vers des r\xE9gions inexplor\xE9es\u201D ? "
-      answerA: Charles de Gaulle
-      answerB: George Washington
-      answerC: Gandhi
-      answerD: Un petit moustachu
-      correctAnswer: 4
-    - question: "Au plus j\u2019avance moins vite, au moins je vais plus vite "
-      answerA: Vrai
-      answerB: Faux
-      answerC: Hein ?
-      answerD: 42
+    - question: CultureG
+      answerA: oui
+      answerB: non
+      answerC: non
+      answerD: non
       correctAnswer: 1
-    - question: "Que se passe-t-il si vous ratez votre le\xE7on duolingo ? "
-      answerA: "Duo viens chez vous pour vous faire dispara\xEEtre "
-      answerB: 'Duo kidnappe votre famille '
-      answerC: 'Duo se suicide et fait un pacte avec Satan '
-      answerD: "\xE7a d\xE9pends de son humeur"
-      correctAnswer: 4
     - question: CultureG
       answerA: non
       answerB: non
       answerC: non
       answerD: oui
       correctAnswer: 4
-    - question: "Parmi ces actions, qu\u2019a fait Chuck Norris ? "
-      answerA: "Il a \xE9puis\xE9 son forfait illimit\xE9"
-      answerB: Il a fini l'eau du robinet, deux fois
-      answerC: Il a atteint le mur du son et a fait un tag dessus
-      answerD: "Toutes ces r\xE9ponses, et il a aussi compt\xE9 jusqu\u2019\xE0 l\u2019infini
-        et fait le tour du soleil \xE0 la nage"
-      correctAnswer: 4
-    - question: "Quelle est le film biographique le moins r\xE9ussi au monde ? "
-      answerA: Bohemian rhapsody
-      answerB: The Imitation Game
-      answerC: Amadeus
-      answerD: "Star Wars, \xE9pisode V : l\u2019Empire contre-attaque "
-      correctAnswer: 2
-    - question: "Si vous r\xE9pondez au hasard \xE0 cette question, quelle est la
-        probabilit\xE9 que vous trouviez la bonne r\xE9ponse ?"
-      answerA: 25 %
-      answerB: 50 %
-      answerC: 25 %
-      answerD: (1000/5) + sqrt(2500) - ((3^3) * 4) / 2 + ln(e^50) %
-      correctAnswer: 4
-    - question: "Qui est le personnage qui marche comme \xE7a ? "
-      answerA: 'Dr Livesey '
-      answerB: Dr K
-      answerC: Dr Ludwig
-      answerD: Dark Vador
-      correctAnswer: 1
-    - question: 'Pourquoi dit-on culture G ? '
-      answerA: "Pour culture g\xE9n\xE9rale "
-      answerB: 'Pour culture gay '
-      answerC: "Parce que culture A, B, C, D, E et F \xE9taient d\xE9j\xE0 prises "
-      answerD: "C\u2019est un clin d\u2019\u0153il au conseil g\xE9n\xE9ral (CG) "
-      correctAnswer: 1
   - categoryName: Thomas
     questions:
-    - question: 'Combien de furry sont gay ? '
-      answerA: "Environ la moiti\xE9"
-      answerB: Tous
-      answerC: Je m'en branle
-      answerD: 14
+    - question: Thomas
+      answerA: oui
+      answerB: non
+      answerC: non
+      answerD: non
       correctAnswer: 1
-    - question: "Laquelle de ces th\xE9ories scientifiques ai-je d\xE9couvert par
-        accident pour des raisons un peu nulles quand j\u2019\xE9tais enfant ? "
-      answerA: "La th\xE9orie de l'univers fractal"
-      answerB: "La th\xE9orie de l'\xE9volution"
-      answerC: "La th\xE9orie de la relativit\xE9"
-      answerD: "Arr\xEAte de mentir"
-      correctAnswer: 1
-    - question: "Lequel de ces mots \xE9trangers n\u2019ai-je jamais prononc\xE9
-        ? "
-      answerA: "Krasno\xEFarsk"
-      answerB: Nyyhkyytteek
-      answerC: 'Verkehrsinfrastrukturfinanzierungsgesellschaftgesetz '
-      answerD: Buxur
-      correctAnswer: 4
-    - question: "Lequel de ces niveaux de geometry dash n\u2019existe pas ? "
-      answerA: B
-      answerB: AAAAAAAAAAAAAAAAAAAA
-      answerC: 'FYLRHWKIBMYFYLHTMY '
-      answerD: Getting Over It
+    - question: Thomas
+      answerA: non
+      answerB: non
+      answerC: oui
+      answerD: non
       correctAnswer: 3
-    - question: "Je n\u2019ai pas trouv\xE9 d\u2019autres questions dr\xF4les sur
-        thomas donc ce th\xE8me s\u2019arr\xEAte ici "
-      answerA: Oh non
-      answerB: Enfin
-      answerC: "\xE7a tombe bien je le d\xE9teste"
-      answerD: "Le cygne Napol\xE9on"
-      correctAnswer: 1
   - categoryName: "Jeux Vid\xE9os"
     questions:
-    - question: "Comment s\u2019\xE9crit Shigeru Myiamoto ? "
-      answerA: Shigeru myiamoto
-      answerB: Shigeriu myiamoto
-      answerC: Shigeru Miyamoto
-      answerD: Jean-Pierre Pernot
-      correctAnswer: 3
-    - question: "Quel est le premier jeu vid\xE9o ? "
-      answerA: Pong
-      answerB: Tennis for two
-      answerC: Pac-man
-      answerD: Calm down Stalin
-      correctAnswer: 2
-    - question: 'Lequel de ces jeux Zelda est sorti en 2006 ? '
-      answerA: The Wind Waker
-      answerB: Twilight Princess
-      answerC: Phantom Hourglass
-      answerD: 'Link : Faces of evil'
-      correctAnswer: 2
-    - question: 'Lequel de ces jeux est sorti en dernier ? '
-      answerA: Dark souls remastered
-      answerB: Breath of the wild
-      answerC: Ori and the Blind Forest
-      answerD: Calm down Stalin
+    - question: "Jeux Vid\xE9os"
+      answerA: oui
+      answerB: non
+      answerC: non
+      answerD: non
       correctAnswer: 1
-    - question: "Quel est le meilleur jeu vid\xE9o au monde ? "
-      answerA: Ocarina of Time
-      answerB: Elden Ring
-      answerC: Rain World
-      answerD: "Il n\u2019y a pas de meilleur jeu, c\u2019est subjectif "
-      correctAnswer: 3
-    - question: "En quelle ann\xE9e sort gta VI ? "
-      answerA: 2024
-      answerB: 2025
-      answerC: 2743
-      answerD: '(14 + 53) / (ln(841)) * 74 '
+    - question: "Jeux Vid\xE9os"
+      answerA: non
+      answerB: oui
+      answerC: non
+      answerD: non
       correctAnswer: 2
   - categoryName: Epitech
     questions:
     - question: Qui est le directeur d'Epitech ?
       answerA: Eric
-      answerB: Antoine
-      answerC: Ada Lovelace
-      answerD: "Le cygne Napol\xE9on"
+      answerB: Ada Lovelace
+      answerC: Antoine
+      answerD: "Cygne Napol\xE9on"
       correctAnswer: 1
-    - question: "Quel projet est un jeu vid\xE9o dans lequel \xE9ric d\xE9fonce Paul
-        Gazeau \xE0 grand coup de catch et de hitbox mal faites ? "
-      answerA: The Show
-      answerB: Jar Jar Binks Ultimate
-      answerC: "Epijaipasdid\xE9e : The Movie : The Game"
-      answerD: MyPrintf
-      correctAnswer: 1
-    - question: 'Quel est le projet le moins bien ? '
-      answerA: Setting Up
-      answerB: My Ls
-      answerC: My Navy
-      answerD: Le projet 2025 de Trump
-      correctAnswer: 4
-    - question: Qui est le meilleur AER ?
-      answerA: "L\xE9onard"
-      answerB: Nathan
-      answerC: Camille
-      answerD: "Le cygne Napol\xE9on"
-      correctAnswer: 4
-    - question: "Qu\u2019est-ce qui est autoris\xE9 en salle machine ? "
-      answerA: Le catch
-      answerB: "Le port d'\xE9p\xE9e"
-      answerC: Les batailles de boules de fausse neige
-      answerD: Tout tant qu'aucun AER ne le voit
-      correctAnswer: 4
-    - question: "Quelle est la nationalit\xE9 de Damien Lallement"
-      answerA: Allemand
-      answerB: "Fran\xE7ais je suppose"
-      answerC: Allement
-      answerD: Listembourgeois
-      correctAnswer: 2
-    - question: "Lors d\u2019une journ\xE9e de la piscine, qu\u2019ont pr\xE9f\xE9r\xE9
-        faire un nombre variable d'\xE9tudiants plut\xF4t que le MyPrintf ? "
-      answerA: "Colorier des t\xE9l\xE9visions \xE0 \xE9cran tactile 85 pouces Iiyama "
-      answerB: "Volez des chaises \xE0 ISEG "
-      answerC: Se rouler par terre
-      answerD: "Planifier un coup d\u2019\xE9tat pour restaurer la souverainet\xE9
-        du cygne Napol\xE9on "
-      correctAnswer: 1
-    - question: "Quel \xE9v\xE8nement a interrompu la passation des AER ? "
-      answerA: Une attaque de chats
-      answerB: Une fusillade
-      answerC: Une coupure de courant
-      answerD: "Quelqu'un a invoqu\xE9 Satan"
-      correctAnswer: 2
-    - question: Pour quelle raison devriez-vous vous inscrire au club Shogi
-      answerA: 'Parce qu''il n''y a personne '
-      answerB: 'Parce que vous avez pas le choix '
-      answerC: "Parce que c\u2019est rigolo "
-      answerD: 'Le Languedoc-Roussillon '
-      correctAnswer: 2
-    - question: "Qui a kidnapp\xE9 le cygne Napol\xE9on ? "
-      answerA: "Qu'il se d\xE9nonce ou \xE7a finira mal"
-      answerB: "On veut le cygne Napol\xE9on, maintenant !"
-      answerC: "Rendez le cygne Napol\xE9on"
-      answerD: "Gloire au cygne Napol\xE9on"
+    - question: Qui est le directeur d'Epitech ?
+      answerA: Ada Lovelace
+      answerB: Eric
+      answerC: Antoine
+      answerD: "Cygne Napol\xE9on"
       correctAnswer: 4
   - categoryName: "Anim\xE9s"
     questions:

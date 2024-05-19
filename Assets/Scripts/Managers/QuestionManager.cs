@@ -19,7 +19,6 @@ public class QuestionManager : Singleton<QuestionManager>
     {
         _gameManager = GameManager.Instance;
         _currentCategory = _gameManager.GetCurrentCategory();
-        FindObjectOfType<Audiomanager>().Play("Question theme");
         LoadNextQuestion();
     }
 
@@ -41,12 +40,10 @@ public class QuestionManager : Singleton<QuestionManager>
         if (isCorrect)
         {
             TweenResult(CorrectImage);
-            FindObjectOfType<Audiomanager>().Play("Right Answer");
         }
         else
         {
             TweenResult(WrongImage);
-            FindObjectOfType<Audiomanager>().Play("Wrong answer");
         }
         return isCorrect;
     }
