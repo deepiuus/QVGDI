@@ -11,20 +11,20 @@ public class QuestionManager : Singleton<QuestionManager>
     public Transform CorrectImage;
     public Transform WrongImage;
     public QuestionUI question;
-    public string categoryName;
     private GameManager _gameManager;
+    private string _currentCategory;
     private QuestionModel _currentQuestion;
 
     private void Start()
     {
         _gameManager = GameManager.Instance;
-
+        _currentCategory = _gameManager.GetCurrentCategory();
         LoadNextQuestion();
     }
 
     public void LoadNextQuestion()
     {
-        _currentQuestion = _gameManager.getQuestionCategory(categoryName);
+        _currentQuestion = _gameManager.getQuestionCategory(_currentCategory);
         if (_currentQuestion != null)
         {
             question.PopulateQuestion(_currentQuestion);

@@ -6,13 +6,9 @@ using UnityEngine;
 public class QuestionUI : MonoBehaviour
 {
     public TextMeshProUGUI QuestionLabel;
-
     public TextMeshProUGUI Answer1Label;
-
     public TextMeshProUGUI Answer2Label;
-
     public TextMeshProUGUI Answer3Label;
-
     public TextMeshProUGUI Answer4Label;
 
     public void PopulateQuestion(QuestionModel questionModel)

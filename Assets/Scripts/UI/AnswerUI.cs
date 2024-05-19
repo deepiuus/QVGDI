@@ -7,11 +7,8 @@ using DG.Tweening;
 public class AnswerUI : MonoBehaviour
 {
     public Image CorrectImage;
-
     public Image WrongImage;
-
     public int answerIndex;
-
     private bool _canBeClicked = true;
 
     private void OnEnable()
