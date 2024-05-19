@@ -288,15 +288,34 @@ MonoBehaviour:
       correctAnswer: 4
   - categoryName: "Anim\xE9s"
     questions:
-    - question: "Quel recette senku de Dr Stone ne nous apprend pas \xE0 faire ?"
-      answerA: Coca Cola
-      answerB: non
-      answerC: non
-      answerD: non
-      correctAnswer: 1
-    - question: "Anim\xE9s"
-      answerA: non
-      answerB: non
-      answerC: oui
-      answerD: non
+    - question: "Quest ce que senku de Dr Stone ne nous apprend pas \xE0 faire ?"
+      answerA: Coca cola
+      answerB: Tank
+      answerC: Grenade Flash
+      answerD: Faire sa coupe de cheveux
+      correctAnswer: 4
+    - question: "Quel est l'anim\xE9 le mieux not\xE9 sur les sites sp\xE9cialis\xE9s
+        ?"
+      answerA: Attack on titan
+      answerB: Sousou no frieren
+      answerC: Fullmetal Alchemist Brotherhood
+      answerD: Steins;Gate
+      correctAnswer: 2
+    - question: Comment s'appelle l'implant que se procure David de Cyberpunk:Edgerunners
+      answerA: Sandvistan
+      answerB: "Ouzb\xE9kistan"
+      answerC: Sandevistan
+      answerD: "Z\xE9mouristan"
       correctAnswer: 3
+    - question: Lequel parmis les choix suivants n'est pas un shonen ?
+      answerA: OnePunchMan
+      answerB: ChainsawMan
+      answerC: DarlingInTheFranxx
+      answerD: HunterxHunter
+      correctAnswer: 1
+    - question: Lequel de ces openings, ne fait pas partis de one piece ?
+      answerA: WeAre!
+      answerB: WeGo!
+      answerC: WeCan!
+      answerD: WeBaguette!
+      correctAnswer: 4
