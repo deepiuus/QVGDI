@@ -575,6 +575,79 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1818251949}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1674032556
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1674032558}
+  - component: {fileID: 1674032557}
+  m_Layer: 0
+  m_Name: Audiomanager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1674032557
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1674032556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45331ea4c0765864c8f29a5c37438ec6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mixerGroup: {fileID: 0}
+  sounds:
+  - name: Question theme
+    clip: {fileID: 8300000, guid: 3c7e5dc7bbf339043b568c3a9d0cead9, type: 3}
+    volume: 0.5
+    volumeVariance: 0
+    pitch: 1
+    pitchvariance: 0
+    loop: 1
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: Right Answer
+    clip: {fileID: 8300000, guid: 57319ffc103542843872e1d884e63b2b, type: 3}
+    volume: 0.4
+    volumeVariance: 0
+    pitch: 1
+    pitchvariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: Wrong answer
+    clip: {fileID: 8300000, guid: 2f3c5550891dd2244b983f382ec1a9bc, type: 3}
+    volume: 5
+    volumeVariance: 0
+    pitch: 1
+    pitchvariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+--- !u!4 &1674032558
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1674032556}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3.0605814, y: 1.792944, z: -0.04221003}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1818251948
 GameObject:
   m_ObjectHideFlags: 0
@@ -616,3 +689,4 @@ SceneRoots:
   - {fileID: 905441409}
   - {fileID: 1438728050}
   - {fileID: 1818251949}
+  - {fileID: 1674032558}
